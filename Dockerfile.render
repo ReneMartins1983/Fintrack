@@ -1,17 +1,28 @@
 # =============================================================================
 # Imagem de produção para a DEMO no Render (SQLite, sem MySQL).
-# Etapa 1: build do front-end (Inertia + Vue, via Vite). Etapa 2: aplicação PHP.
+# Etapa 1: dependências PHP (vendor) — o build do front importa o Ziggy daqui.
+# Etapa 2: build do front-end (Inertia + Vue, via Vite + Tailwind).
+# Etapa 3: aplicação PHP.
 # =============================================================================
 
-# --- Etapa 1: assets (Vue + Inertia + Vite) ---------------------------------
+# --- Etapa 1: vendor (PHP) ---------------------------------------------------
+FROM composer:2.9 AS vendor
+WORKDIR /app
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --no-interaction
+
+# --- Etapa 2: assets (Vue + Inertia + Vite) ---------------------------------
+# Inclui vendor/tightenco/ziggy (importado em resources/js/app.js) e os
+# arquivos de configuração do Tailwind v3 (PostCSS).
 FROM node:20-alpine AS assets
 WORKDIR /app
-COPY package.json package-lock.json vite.config.js ./
+COPY package.json package-lock.json vite.config.js tailwind.config.js postcss.config.js ./
 RUN npm ci
 COPY resources ./resources
+COPY --from=vendor /app/vendor ./vendor
 RUN npm run build
 
-# --- Etapa 2: aplicação ------------------------------------------------------
+# --- Etapa 3: aplicação ------------------------------------------------------
 FROM php:8.3-cli-bookworm
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
