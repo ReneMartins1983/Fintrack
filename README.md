@@ -3,13 +3,13 @@
 > **Controle de finanças pessoais** — registre receitas e despesas, organize por categorias e contas, acompanhe orçamentos e veja para onde seu dinheiro vai, com **dashboard e gráficos**.
 
 [![CI](https://github.com/ReneMartins1983/FinTrack/actions/workflows/ci.yml/badge.svg)](https://github.com/ReneMartins1983/FinTrack/actions/workflows/ci.yml)
-[![Demo](https://img.shields.io/badge/demo-online-success)](https://fintrack.onrender.com)
+[![Demo](https://img.shields.io/badge/demo-online-success)](https://fintrack-0g67.onrender.com)
 ![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)
 ![Inertia](https://img.shields.io/badge/Inertia-2-9553E9?logo=inertia&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.3-777BB4?logo=php&logoColor=white)
 
-🌐 **Demo ao vivo:** **<https://fintrack.onrender.com>** — `demo@fintrack.app` / `password`
+🌐 **Demo ao vivo:** **<https://fintrack-0g67.onrender.com>** — `demo@fintrack.app` / `password`
 
 > Roda no plano gratuito do Render: o primeiro acesso após inatividade pode levar ~30–50s para "acordar".
 
