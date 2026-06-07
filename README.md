@@ -33,6 +33,8 @@ os dados direto do controller). Layout com **sidebar** e identidade própria em 
   calculado a partir dos lançamentos.
 - 🎯 **Orçamentos (opcional)**: limite mensal por categoria, com barra de progresso e
   alerta de estouro.
+- 📥 **Importação de CSV**: importe extratos com **mapeamento de colunas** e **prévia**
+  antes de confirmar (tipo inferido pelo sinal do valor).
 - 🔐 Autenticação (Laravel Breeze) e dados **isolados por usuário**.
 - 🧪 Testado (feature tests) e com **CI**.
 
@@ -67,6 +69,7 @@ os dados direto do controller). Layout com **sidebar** e identidade própria em 
 | `Pages/Categories/Index.vue` | Categorias por tipo, com cor/ícone |
 | `Pages/Accounts/Index.vue` | Contas com saldo atual |
 | `Pages/Budgets/Index.vue` | Orçamentos mensais (opcional) |
+| `Pages/Import/Index.vue` | Importação de CSV (parse, mapeamento e prévia) |
 | `Components/Charts/*` | Wrappers de Chart.js (linha e rosca) |
 
 ## 🚀 Como rodar

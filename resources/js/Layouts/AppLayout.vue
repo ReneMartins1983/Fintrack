@@ -23,6 +23,7 @@ const nav = [
     { name: 'Categorias', route: 'categories.index', icon: '<path fill-rule="evenodd" d="M17.707 9.293l-5-5A1 1 0 0012 4H7a3 3 0 00-3 3v5a1 1 0 00.293.707l5 5a1 1 0 001.414 0l7-7a1 1 0 000-1.414zM8 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />' },
     { name: 'Contas', route: 'accounts.index', icon: '<path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9z" />' },
     { name: 'Orçamentos', route: 'budgets.index', icon: '<path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />' },
+    { name: 'Importar CSV', route: 'import.index', icon: '<path d="M9.25 13.25a.75.75 0 001.5 0V4.636l2.955 3.129a.75.75 0 001.09-1.03l-4.25-4.5a.75.75 0 00-1.09 0l-4.25 4.5a.75.75 0 101.09 1.03L9.25 4.636v8.614z" /><path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z" />' },
 ];
 
 const isCurrent = (name) => route().current(name);
